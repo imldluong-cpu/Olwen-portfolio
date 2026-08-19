@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minh Anh - Marketing Specialist Portfolio</title>
+    <meta name="description" content="Portfolio cá nhân chuyên nghiệp - Chuyên viên Digital Marketing, Chiến lược Thương hiệu & Tăng trưởng Doanh thu.">
+    <meta name="keywords" content="Marketing Portfolio, Digital Marketing, Brand Strategy, Performance Ads, SEO, Content Marketing">
+    
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="Minh Anh - Marketing Specialist Portfolio">
+    <meta property="og:description" content="Khám phá các chiến dịch Marketing đột phá, kinh nghiệm thực chiến và bộ kỹ năng chuyên sâu.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/about-me.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Outfit', 'sans-serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- Top Scroll Progress Bar -->
+    <div id="scroll-progress" style="width: 0%;"></div>
+
+    <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#home" class="flex items-center gap-2.5 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-pink-500 flex items-center justify-center text-white font-extrabold text-xl shadow-lg shadow-indigo-500/30 group-hover:scale-105 transition-transform">
+                    M
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-heading font-extrabold text-lg tracking-tight text-slate-100 group-hover:text-indigo-400 transition-colors">
+                        MINH ANH<span class="text-indigo-500">.</span>
+                    </span>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-slate-400 -mt-1">Marketing Pro</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Menu -->
+            <nav class="hidden md:flex items-center gap-7">
+                <a href="#home" id="nav-home" class="nav-link text-sm font-medium text-slate-300 hover:text-indigo-400 transition-colors">Trang chủ</a>
+                <a href="#about" id="nav-about" class="nav-link text-sm font-medium text-slate-300 hover:text-indigo-400 transition-colors">Giới thiệu</a>
+                <a href="#experiences" id="nav-experiences" class="nav-link text-sm font-medium text-slate-300 hover:text-indigo-400 transition-colors">Kinh nghiệm & Dự án</a>
+                <a href="#skills" id="nav-skills" class="nav-link text-sm font-medium text-slate-300 hover:text-indigo-400 transition-colors">Kỹ năng</a>
+                <a href="#education" id="nav-education" class="nav-link text-sm font-medium text-slate-300 hover:text-indigo-400 transition-colors">Học vấn</a>
+                <a href="#contact" id="nav-contact" class="nav-link text-sm font-medium text-slate-300 hover:text-indigo-400 transition-colors">Liên hệ</a>
+            </nav>
+
+            <!-- Action Controls (Language, Theme, CTA) -->
+            <div class="hidden md:flex items-center gap-3">
+                <!-- Language Switcher Button -->
+                <button id="lang-toggle" class="lang-toggle-btn" title="Chuyển đổi ngôn ngữ / Switch language">
+                    <span id="lang-text">🇻🇳 VI</span>
+                </button>
+
+                <!-- Theme Switcher Button -->
+                <button id="theme-toggle" class="p-2.5 rounded-full glass-card hover:border-indigo-500/50 text-slate-300 hover:text-indigo-400 transition-all" title="Đổi giao diện Sáng/Tối">
+                    <i id="theme-icon" data-lucide="moon" class="w-4 h-4"></i>
+                </button>
+
+                <!-- CV Download Button -->
+                <a href="#contact" id="nav-cv" class="gradient-bg-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-md">
+                    <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                    <span>Tải CV</span>
+                </a>
+            </div>
+
+            <!-- Mobile Controls & Hamburger -->
+            <div class="flex md:hidden items-center gap-2">
+                <button id="mobile-lang-toggle" onclick="toggleLanguage()" class="lang-toggle-btn text-xs py-1 px-2.5">
+                    <span>🌐</span>
+                </button>
+                <button onclick="toggleTheme()" class="p-2 rounded-lg glass-card text-slate-300">
+                    <i data-lucide="moon" class="w-4 h-4"></i>
+                </button>
+                <button id="mobile-menu-btn" class="p-2 rounded-lg glass-card text-slate-300 hover:text-white">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu (Dropdown) -->
+        <div id="mobile-menu" class="hidden md:hidden glass-nav border-t border-slate-700/40 px-6 py-5 flex flex-col gap-4">
+            <a href="#home" id="m-nav-home" class="mobile-nav-link text-sm font-semibold text-slate-200 py-1">Trang chủ</a>
+            <a href="#about" id="m-nav-about" class="mobile-nav-link text-sm font-semibold text-slate-200 py-1">Giới thiệu</a>
+            <a href="#experiences" id="m-nav-experiences" class="mobile-nav-link text-sm font-semibold text-slate-200 py-1">Kinh nghiệm & Dự án</a>
+            <a href="#skills" id="m-nav-skills" class="mobile-nav-link text-sm font-semibold text-slate-200 py-1">Kỹ năng</a>
+            <a href="#education" id="m-nav-education" class="mobile-nav-link text-sm font-semibold text-slate-200 py-1">Học vấn & Chứng chỉ</a>
+            <a href="#contact" id="m-nav-contact" class="mobile-nav-link text-sm font-semibold text-slate-200 py-1">Liên hệ</a>
+            <a href="#contact" id="m-nav-cv" class="gradient-bg-btn text-center py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider mt-2">Tải CV</a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- ==========================================================================
+           1. HOME / HERO SECTION
+           ========================================================================== -->
+        <section id="home" class="min-h-[calc(100vh-5rem)] flex items-center justify-center relative overflow-hidden py-16 px-4 sm:px-6 lg:px-8">
+            <!-- Background Gradient Blobs -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-indigo-600/15 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+            <div class="absolute bottom-10 right-10 w-[400px] h-[400px] bg-pink-600/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                <!-- Left Content -->
+                <div class="lg:col-span-7 flex flex-col items-start text-left space-y-6">
+                    <!-- Status Badge -->
+                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-card border border-emerald-500/30 text-xs font-semibold text-emerald-400">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                        <span id="hero-status">Sẵn sàng nhận dự án mới</span>
+                    </div>
+
+                    <!-- Main Headline -->
+                    <div>
+                        <p id="hero-greeting" class="text-lg sm:text-xl font-semibold text-indigo-400 mb-2">Xin chào, tôi là</p>
+                        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-slate-100 tracking-tight leading-[1.1]">
+                            <span id="hero-name">Minh Anh</span>
+                        </h1>
+                        <!-- Typewriter Dynamic Headline -->
+                        <div class="text-xl sm:text-2xl lg:text-3xl font-bold mt-3 text-slate-300 flex items-center min-h-[40px]">
+                            <span id="typewriter-text" class="gradient-text"></span>
+                            <span class="typewriter-cursor"></span>
+                        </div>
+                    </div>
+
+                    <!-- Tagline -->
+                    <p id="hero-tagline" class="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
+                        Kết hợp tư duy Sáng tạo Nghệ thuật và Phân tích Số liệu (Data-driven) để kiến tạo các chiến dịch tiếp thị bứt phá và thúc đẩy tăng trưởng doanh thu bền vững.
+                    </p>
+
+                    <!-- CTA Action Buttons -->
+                    <div class="flex flex-wrap items-center gap-4 pt-2 w-full sm:w-auto">
+                        <a href="#experiences" id="hero-cta-projects" class="gradient-bg-btn px-7 py-3.5 rounded-full text-sm font-bold shadow-lg flex items-center justify-center gap-2 w-full sm:w-auto">
+                            <span>Xem Chiến Dịch</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#contact" id="hero-cta-contact" class="glass-card px-7 py-3.5 rounded-full text-sm font-bold text-slate-200 hover:text-indigo-400 hover:border-indigo-500/50 flex items-center justify-center gap-2 w-full sm:w-auto">
+                            <span>Liên Hệ Ngay</span>
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Social Channels -->
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-700/40 w-full">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Kết nối:</span>
+                        <div class="flex items-center gap-2">
+                            <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="w-9 h-9 rounded-full glass-card flex items-center justify-center text-slate-300 hover:text-indigo-400 hover:scale-110 transition-all">
+                                <i data-lucide="linkedin" class="w-4 h-4"></i>
+                            </a>
+                            <a href="https://facebook.com" target="_blank" rel="noreferrer" class="w-9 h-9 rounded-full glass-card flex items-center justify-center text-slate-300 hover:text-indigo-400 hover:scale-110 transition-all">
+                                <i data-lucide="facebook" class="w-4 h-4"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" rel="noreferrer" class="w-9 h-9 rounded-full glass-card flex items-center justify-center text-slate-300 hover:text-pink-400 hover:scale-110 transition-all">
+                                <i data-lucide="instagram" class="w-4 h-4"></i>
+                            </a>
+                            <a href="mailto:minhanh.marketing@gmail.com" class="w-9 h-9 rounded-full glass-card flex items-center justify-center text-slate-300 hover:text-emerald-400 hover:scale-110 transition-all">
+                                <i data-lucide="mail" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Profile Visual & Floating Badges -->
+                <div class="lg:col-span-5 flex items-center justify-center relative">
+                    <div class="relative w-72 sm:w-84 md:w-96 aspect-[4/5] rounded-3xl p-2.5 bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 shadow-2xl pulse-glow">
+                        <div class="w-full h-full rounded-2xl overflow-hidden bg-slate-900">
+                            <img id="hero-avatar-img" src="assets/images/avatar.jpg" alt="Profile Avatar" class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Floating Achievement Badge 1 -->
+                        <div class="absolute -bottom-6 -left-6 glass-card p-3.5 rounded-2xl shadow-xl flex items-center gap-3 float-slow border border-indigo-500/30">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center">
+                                <i data-lucide="award" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div id="hero-exp-badge" class="text-xs font-bold text-slate-100">3+ Năm Kinh Nghiệm</div>
+                                <div class="text-[10px] text-slate-400">Marketing & Growth</div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Achievement Badge 2 -->
+                        <div class="absolute -top-4 -right-4 glass-card p-3 rounded-2xl shadow-xl flex items-center gap-2.5 float-delayed border border-pink-500/30">
+                            <div class="w-9 h-9 rounded-xl bg-pink-500/20 text-pink-400 flex items-center justify-center">
+                                <i data-lucide="trending-up" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <div id="hero-roas-badge" class="text-xs font-bold text-slate-100">350% Tăng Trưởng</div>
+                                <div class="text-[10px] text-slate-400">ROAS & Doanh Thu</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           2. ABOUT ME SECTION
+           ========================================================================== -->
+        <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-slate-800/40 relative">
+            <div class="max-w-7xl mx-auto space-y-16">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto space-y-3">
+                    <span id="about-badge" class="section-badge">Về bản thân</span>
+                    <h2 id="about-title" class="text-3xl sm:text-4xl font-extrabold text-slate-100">Đam mê kiến tạo giá trị qua từng chiến dịch</h2>
+                    <p id="about-subtitle" class="text-slate-400 text-sm sm:text-base">Hành trình kết nối cảm xúc thương hiệu với khách hàng mục tiêu</p>
+                </div>
+
+                <!-- Bio & Stats Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                    <!-- Left: Bio & Quick Info -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="glass-card p-8 space-y-4">
+                            <h3 class="text-xl font-bold text-slate-100 flex items-center gap-2.5">
+                                <i data-lucide="user" class="w-5 h-5 text-indigo-400"></i>
+                                <span>Marketing Specialist & Growth Strategist</span>
+                            </h3>
+                            <p id="about-p1" class="text-slate-300 text-sm sm:text-base leading-relaxed"></p>
+                            <p id="about-p2" class="text-slate-300 text-sm sm:text-base leading-relaxed"></p>
+                        </div>
+
+                        <!-- Quick Info Pills -->
+                        <div id="about-quick-info" class="grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
+                    </div>
+
+                    <!-- Right: Statistics Counter Cards -->
+                    <div class="lg:col-span-5 space-y-4">
+                        <div id="about-stats" class="grid grid-cols-2 gap-4"></div>
+                        
+                        <!-- Featured Image Card -->
+                        <div class="glass-card p-4 rounded-2xl overflow-hidden">
+                            <img src="assets/images/about-me.jpg" alt="About Me Working" class="w-full h-48 object-cover rounded-xl">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery / Moments Sub-section -->
+                <div class="space-y-6 pt-8">
+                    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-slate-800 pb-4">
+                        <div>
+                            <h3 id="about-gallery-title" class="text-xl font-bold text-slate-100">Khoảnh khắc & Hoạt động thực tế</h3>
+                            <p id="about-gallery-subtitle" class="text-xs sm:text-sm text-slate-400 mt-1">Một số hình ảnh tại các sự kiện, workshop và hoạt động thường nhật</p>
+                        </div>
+                        <span class="text-xs font-semibold text-indigo-400 flex items-center gap-1">
+                            <i data-lucide="mouse-pointer-click" class="w-3.5 h-3.5"></i> Click xem ảnh lớn
+                        </span>
+                    </div>
+
+                    <!-- Gallery Grid -->
+                    <div id="about-gallery-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           3. EXPERIENCES & PROJECTS SECTION
+           ========================================================================== -->
+        <section id="experiences" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-slate-800/40 bg-slate-950/30">
+            <div class="max-w-7xl mx-auto space-y-20">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto space-y-3">
+                    <span id="exp-badge" class="section-badge">Kinh nghiệm làm việc</span>
+                    <h2 id="exp-title" class="text-3xl sm:text-4xl font-extrabold text-slate-100">Hành trình nghề nghiệp & Dấu ấn thực chiến</h2>
+                    <p id="exp-subtitle" class="text-slate-400 text-sm sm:text-base">Những cột mốc phát triển và các chiến dịch Marketing tiêu biểu đã trực tiếp thực thi</p>
+                </div>
+
+                <!-- Sub-section 1: Timeline -->
+                <div class="space-y-8">
+                    <h3 id="exp-timeline-title" class="text-2xl font-bold text-slate-100 flex items-center gap-2.5">
+                        <i data-lucide="briefcase" class="w-6 h-6 text-indigo-400"></i>
+                        <span>Lịch sử công tác</span>
+                    </h3>
+                    <div id="exp-timeline" class="max-w-4xl"></div>
+                </div>
+
+                <!-- Sub-section 2: Featured Campaigns & Case Studies -->
+                <div class="space-y-8 pt-8 border-t border-slate-800/60">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <h3 id="exp-projects-title" class="text-2xl font-bold text-slate-100 flex items-center gap-2.5">
+                            <i data-lucide="sparkles" class="w-6 h-6 text-pink-400"></i>
+                            <span>Chiến dịch & Dự án tiêu biểu</span>
+                        </h3>
+                        <!-- Category Filters -->
+                        <div id="project-filters" class="flex flex-wrap gap-2"></div>
+                    </div>
+
+                    <!-- Projects Grid -->
+                    <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           4. SKILLS SECTION
+           ========================================================================== -->
+        <section id="skills" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-slate-800/40">
+            <div class="max-w-7xl mx-auto space-y-16">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto space-y-3">
+                    <span id="skills-badge" class="section-badge">Kỹ năng chuyên môn</span>
+                    <h2 id="skills-title" class="text-3xl sm:text-4xl font-extrabold text-slate-100">Bộ công cụ & Năng lực tiếp thị cốt lõi</h2>
+                    <p id="skills-subtitle" class="text-slate-400 text-sm sm:text-base">Sự kết hợp giữa tư duy chiến lược, công nghệ phân tích số liệu và sự sáng tạo không ngừng</p>
+                </div>
+
+                <!-- Skills Categories Grid -->
+                <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. EDUCATION & CERTIFICATIONS SECTION
+           ========================================================================== -->
+        <section id="education" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-slate-800/40 bg-slate-950/30">
+            <div class="max-w-7xl mx-auto space-y-16">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto space-y-3">
+                    <span id="edu-badge" class="section-badge">Học vấn & Bằng cấp</span>
+                    <h2 id="edu-title" class="text-3xl sm:text-4xl font-extrabold text-slate-100">Nền tảng học thuật & Chứng chỉ chuyên ngành</h2>
+                    <p id="edu-subtitle" class="text-slate-400 text-sm sm:text-base">Liên tục trau dồi kiến thức chuẩn quốc tế để bắt kịp xu hướng thị trường</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                    <!-- Left: Degrees -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <h3 id="edu-degrees-title" class="text-xl font-bold text-slate-100 flex items-center gap-2.5">
+                            <i data-lucide="graduation-cap" class="w-5 h-5 text-indigo-400"></i>
+                            <span>Quá trình học vấn</span>
+                        </h3>
+                        <div id="edu-degrees-list" class="space-y-4"></div>
+                    </div>
+
+                    <!-- Right: Certifications -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <h3 id="edu-certs-title" class="text-xl font-bold text-slate-100 flex items-center gap-2.5">
+                            <i data-lucide="award" class="w-5 h-5 text-pink-400"></i>
+                            <span>Chứng chỉ chuyên nghiệp quốc tế</span>
+                        </h3>
+                        <div id="edu-certs-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. CONTACT SECTION
+           ========================================================================== -->
+        <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-slate-800/40 relative">
+            <div class="max-w-7xl mx-auto space-y-16">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto space-y-3">
+                    <span id="contact-badge" class="section-badge">Kết nối ngay</span>
+                    <h2 id="contact-title" class="text-3xl sm:text-4xl font-extrabold text-slate-100">Cùng tạo nên những chiến dịch đột phá</h2>
+                    <p id="contact-subtitle" class="text-slate-400 text-sm sm:text-base">Bạn đang có ý tưởng mới hoặc cần tìm một chuyên gia Marketing đồng hành? Hãy gửi tin nhắn cho tôi ngay hôm nay!</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                    <!-- Left: Contact Details -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <div class="glass-card p-8 space-y-6">
+                            <h3 id="contact-info-title" class="text-xl font-bold text-slate-100">Thông tin liên hệ</h3>
+                            
+                            <div class="space-y-4">
+                                <a href="mailto:minhanh.marketing@gmail.com" class="flex items-center gap-4 p-3.5 rounded-xl bg-slate-800/40 hover:bg-indigo-500/10 border border-slate-700/50 hover:border-indigo-500/40 transition-all group">
+                                    <div class="w-11 h-11 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                        <i data-lucide="mail" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs text-slate-400">Email</div>
+                                        <div id="contact-email-val" class="text-sm font-semibold text-slate-200 group-hover:text-indigo-400">minhanh.marketing@gmail.com</div>
+                                    </div>
+                                </a>
+
+                                <a href="tel:+84912345678" class="flex items-center gap-4 p-3.5 rounded-xl bg-slate-800/40 hover:bg-emerald-500/10 border border-slate-700/50 hover:border-emerald-500/40 transition-all group">
+                                    <div class="w-11 h-11 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                        <i data-lucide="phone" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs text-slate-400">Hotline / Zalo</div>
+                                        <div id="contact-phone-val" class="text-sm font-semibold text-slate-200 group-hover:text-emerald-400">+84 912 345 678</div>
+                                    </div>
+                                </a>
+
+                                <div class="flex items-center gap-4 p-3.5 rounded-xl bg-slate-800/40 border border-slate-700/50">
+                                    <div class="w-11 h-11 rounded-lg bg-pink-500/10 text-pink-400 flex items-center justify-center">
+                                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs text-slate-400">Địa điểm</div>
+                                        <div id="contact-loc-val" class="text-sm font-semibold text-slate-200">Hà Nội / TP. Hồ Chí Minh, Việt Nam</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Social Links -->
+                            <div class="pt-4 border-t border-slate-700/50">
+                                <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Kênh truyền thông:</div>
+                                <div class="flex items-center gap-3">
+                                    <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="p-2.5 rounded-lg bg-slate-800 hover:bg-indigo-600 text-slate-300 hover:text-white transition-colors">
+                                        <i data-lucide="linkedin" class="w-4 h-4"></i>
+                                    </a>
+                                    <a href="https://facebook.com" target="_blank" rel="noreferrer" class="p-2.5 rounded-lg bg-slate-800 hover:bg-indigo-600 text-slate-300 hover:text-white transition-colors">
+                                        <i data-lucide="facebook" class="w-4 h-4"></i>
+                                    </a>
+                                    <a href="https://instagram.com" target="_blank" rel="noreferrer" class="p-2.5 rounded-lg bg-slate-800 hover:bg-pink-600 text-slate-300 hover:text-white transition-colors">
+                                        <i data-lucide="instagram" class="w-4 h-4"></i>
+                                    </a>
+                                    <a href="https://tiktok.com" target="_blank" rel="noreferrer" class="p-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors">
+                                        <i data-lucide="video" class="w-4 h-4"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Interactive Contact Form -->
+                    <div class="lg:col-span-7">
+                        <form id="contact-form" class="glass-card p-8 space-y-6">
+                            <h3 id="contact-form-title" class="text-xl font-bold text-slate-100">Gửi tin nhắn trực tiếp</h3>
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label id="label-name" class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Họ và tên của bạn</label>
+                                    <input type="text" required class="w-full px-4 py-3 rounded-xl bg-slate-900/60 border border-slate-700 text-slate-100 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all placeholder:text-slate-500" placeholder="VD: Nguyễn Văn A">
+                                </div>
+                                <div>
+                                    <label id="label-email" class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Địa chỉ Email</label>
+                                    <input type="email" required class="w-full px-4 py-3 rounded-xl bg-slate-900/60 border border-slate-700 text-slate-100 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all placeholder:text-slate-500" placeholder="email@example.com">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label id="label-subject" class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Chủ đề / Dịch vụ quan tâm</label>
+                                <select id="contact-subject" class="w-full px-4 py-3 rounded-xl bg-slate-900/60 border border-slate-700 text-slate-100 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"></select>
+                            </div>
+
+                            <div>
+                                <label id="label-message" class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Nội dung tin nhắn</label>
+                                <textarea rows="4" required class="w-full px-4 py-3 rounded-xl bg-slate-900/60 border border-slate-700 text-slate-100 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all placeholder:text-slate-500 resize-none" placeholder="Hãy mô tả chi tiết yêu cầu hoặc dự án của bạn..."></textarea>
+                            </div>
+
+                            <button type="submit" id="contact-submit-btn" class="gradient-bg-btn w-full py-4 rounded-xl text-sm font-bold shadow-lg flex items-center justify-center">
+                                <span>Gửi tin nhắn ngay</span>
+                                <i data-lucide="send" class="w-4 h-4 ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 border-t border-slate-800 bg-slate-950/80">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+            <div class="space-y-1">
+                <div class="font-heading font-extrabold text-lg tracking-tight text-slate-100">
+                    MINH ANH<span class="text-indigo-500">.</span>
+                </div>
+                <p id="footer-rights" class="text-xs text-slate-400">© 2026 Minh Anh Portfolio. Bảo lưu mọi quyền.</p>
+            </div>
+            <p id="footer-built" class="text-xs text-slate-400">Thiết kế với đam mê & sáng tạo dành cho Portfolio chuyên nghiệp.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Floating Button -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 p-3.5 rounded-full gradient-bg-btn shadow-2xl opacity-0 pointer-events-none transition-all duration-300 z-40" title="Về đầu trang">
+        <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+
+    <!-- Gallery Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-modal">
+        <button id="lightbox-close" class="absolute top-6 right-6 p-2 rounded-full bg-slate-800/80 text-white hover:bg-slate-700 transition-colors z-10" title="Đóng">
+            <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+        <button id="lightbox-prev" class="absolute left-6 p-3 rounded-full bg-slate-800/80 text-white hover:bg-slate-700 transition-colors z-10" title="Ảnh trước">
+            <i data-lucide="chevron-left" class="w-6 h-6"></i>
+        </button>
+        <button id="lightbox-next" class="absolute right-6 p-3 rounded-full bg-slate-800/80 text-white hover:bg-slate-700 transition-colors z-10" title="Ảnh tiếp theo">
+            <i data-lucide="chevron-right" class="w-6 h-6"></i>
+        </button>
+        
+        <div class="lightbox-content max-w-4xl max-h-[85vh] flex flex-col items-center">
+            <img id="lightbox-img" src="" alt="Enlarged gallery item" class="max-w-full max-h-[75vh] object-contain rounded-xl shadow-2xl">
+            <div id="lightbox-caption" class="text-white text-sm font-medium mt-3 px-4 py-1.5 rounded-full bg-black/60 backdrop-blur-md"></div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Popup -->
+    <div id="toast-notification" class="toast-notification">
+        <div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+            <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+        </div>
+        <div id="toast-message" class="text-xs sm:text-sm font-semibold"></div>
+    </div>
+
+    <!-- Floating Quick Editor Button -->
+    <button id="open-editor-btn" class="fixed bottom-6 left-6 p-3 rounded-full glass-card hover:border-indigo-500 text-slate-300 hover:text-indigo-400 shadow-xl flex items-center gap-2 z-40 transition-transform hover:scale-105" title="Chỉnh sửa nội dung trực quan (Ctrl+Shift+E)">
+        <i data-lucide="edit-3" class="w-5 h-5 text-indigo-400"></i>
+        <span class="text-xs font-bold hidden sm:inline">Chỉnh sửa</span>
+    </button>
+
+    <!-- Visual In-Browser Quick Editor Modal -->
+    <div id="editor-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden items-center justify-center p-4">
+        <div class="glass-card bg-slate-900/95 border-indigo-500/40 w-full max-w-3xl max-h-[90vh] flex flex-col rounded-2xl shadow-2xl overflow-hidden">
+            <!-- Modal Header -->
+            <div class="px-6 py-4 border-b border-slate-700/60 flex items-center justify-between bg-slate-800/50">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center">
+                        <i data-lucide="sliders" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold text-slate-100">Trình Chỉnh Sửa Thông Tin Trực Quan</h3>
+                        <p class="text-xs text-slate-400">Chỉnh sửa trực tiếp tại đây trên bất kỳ máy tính nào</p>
+                    </div>
+                </div>
+                <button id="close-editor-btn" class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-700/50">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <!-- Modal Body (Form Fields) -->
+            <div class="p-6 overflow-y-auto space-y-6 text-xs">
+                <!-- Highlighted Avatar Upload & Preview Section -->
+                <div class="p-4 rounded-xl bg-slate-800/80 border border-indigo-500/30 flex flex-col sm:flex-row items-center gap-5">
+                    <div class="relative w-20 h-20 rounded-2xl overflow-hidden bg-slate-900 border-2 border-indigo-500 shrink-0 shadow-lg">
+                        <img id="edit-avatar-preview" src="assets/images/avatar.jpg" alt="Avatar Preview" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1 w-full space-y-2">
+                        <div class="flex items-center justify-between">
+                            <label class="block font-bold text-slate-200 uppercase tracking-wider">Ảnh đại diện (Avatar Trang chủ)</label>
+                            <span class="text-[10px] text-indigo-400 font-semibold">Hỗ trợ JPG, PNG, WEBP hoặc Link Online</span>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            <div>
+                                <input id="edit-avatar-file" type="file" accept="image/*" class="w-full text-xs text-slate-400 file:mr-2 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-indigo-600 file:text-white hover:file:bg-indigo-500 cursor-pointer">
+                            </div>
+                            <div>
+                                <input id="edit-avatar" type="text" placeholder="Hoặc dán link ảnh: https://..." class="w-full px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-slate-100 focus:outline-none focus:border-indigo-500">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 1: Name & Contact -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block font-bold text-slate-300 uppercase tracking-wider mb-1.5">Họ và Tên</label>
+                        <input id="edit-name" type="text" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-100 focus:outline-none focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label class="block font-bold text-slate-300 uppercase tracking-wider mb-1.5">Email</label>
+                        <input id="edit-email" type="email" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-100 focus:outline-none focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label class="block font-bold text-slate-300 uppercase tracking-wider mb-1.5">Số điện thoại / Zalo</label>
+                        <input id="edit-phone" type="text" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-100 focus:outline-none focus:border-indigo-500">
+                    </div>
+                </div>
+
+                <!-- Row 2: Locations -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block font-bold text-slate-300 uppercase tracking-wider mb-1.5">Địa điểm (Tiếng Việt)</label>
+                        <input id="edit-location-vi" type="text" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-100 focus:outline-none focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label class="block font-bold text-slate-300 uppercase tracking-wider mb-1.5">Địa điểm (English)</label>
+                        <input id="edit-location-en" type="text" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-100 focus:outline-none focus:border-indigo-500">
+                    </div>
+                </div>
+
+                <!-- Row 3: Taglines -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block font-bold text-slate-300 uppercase tracking-wider mb-1.5">Khẩu hiệu / Tagline (Tiếng Việt)</label>
+                        <textarea id="edit-tagline-vi" rows="2" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-100 focus:outline-none focus:border-indigo-500 resize-none"></textarea>
+                    </div>
+                    <div>
+                        <label class="block font-bold text-slate-300 uppercase tracking-wider mb-1.5">Khẩu hiệu / Tagline (English)</label>
+                        <textarea id="edit-tagline-en" rows="2" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-100 focus:outline-none focus:border-indigo-500 resize-none"></textarea>
+                    </div>
+                </div>
+
+                <!-- Row 4: Bio Paragraphs -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block font-bold text-slate-300 uppercase tracking-wider mb-1.5">Tiểu sử giới thiệu (Tiếng Việt)</label>
+                        <textarea id="edit-bio-vi" rows="3" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-100 focus:outline-none focus:border-indigo-500 resize-none"></textarea>
+                    </div>
+                    <div>
+                        <label class="block font-bold text-slate-300 uppercase tracking-wider mb-1.5">Tiểu sử giới thiệu (English)</label>
+                        <textarea id="edit-bio-en" rows="3" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-100 focus:outline-none focus:border-indigo-500 resize-none"></textarea>
+                    </div>
+                </div>
+
+                <!-- Row 5: Socials & CV -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block font-bold text-slate-300 uppercase tracking-wider mb-1.5">Link LinkedIn</label>
+                        <input id="edit-linkedin" type="text" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-100 focus:outline-none focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label class="block font-bold text-slate-300 uppercase tracking-wider mb-1.5">Link Facebook</label>
+                        <input id="edit-facebook" type="text" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-100 focus:outline-none focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label class="block font-bold text-slate-300 uppercase tracking-wider mb-1.5">Link TikTok / Instagram</label>
+                        <input id="edit-tiktok" type="text" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-100 focus:outline-none focus:border-indigo-500">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="px-6 py-4 border-t border-slate-700/60 flex flex-wrap items-center justify-between gap-3 bg-slate-800/50">
+                <div class="flex items-center gap-2">
+                    <button id="editor-download-js" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-600 flex items-center gap-1.5 font-semibold text-xs">
+                        <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                        <span>Tải file profileData.js</span>
+                    </button>
+                    <button id="editor-copy-code" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-600 flex items-center gap-1.5 font-semibold text-xs">
+                        <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                        <span>Sao chép mã</span>
+                    </button>
+                </div>
+                <button id="editor-save-preview" class="gradient-bg-btn px-6 py-2.5 rounded-lg text-xs font-bold flex items-center gap-2">
+                    <i data-lucide="check" class="w-4 h-4"></i>
+                    <span>Áp dụng & Xem trước ngay</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts (with cache-busting) -->
+    <script src="js/profileData.js?v=1.2"></script>
+    <script src="js/main.js?v=1.2"></script>
+</body>
+</html>
