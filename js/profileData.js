@@ -9,19 +9,19 @@ const profileData = {
     // Cấu hình chung / General configuration
     config: {
         defaultLang: "vi", // "vi" hoặc "en"
-        defaultTheme: "dark", // "dark" hoặc "light"
-        email: "minhanh.marketing@gmail.com",
-        phone: "+84 912 345 678",
+        defaultTheme: "light", // "dark" hoặc "light"
+        email: "olwenluu@gmail.com",
+        phone: "+84 908 613 416",
         location: {
-            vi: "Hà Nội / TP. Hồ Chí Minh, Việt Nam",
-            en: "Hanoi / Ho Chi Minh City, Vietnam"
+            vi: "Cần Thơ / TP. Cần Thơ, Việt Nam",
+            en: "CanTho / Can Tho City, Vietnam"
         },
         socials: {
-            linkedin: "https://linkedin.com",
-            facebook: "https://facebook.com",
-            instagram: "https://instagram.com",
-            tiktok: "https://tiktok.com",
-            email: "mailto:minhanh.marketing@gmail.com"
+            linkedin: "https://www.linkedin.com/in/yen-luu/",
+            facebook: "https://www.facebook.com/yenluu1303/",
+            instagram: "https://www.instagram.com/py03/",
+            tiktok: "https://www.tiktok.com/@betoyen",
+            email: "olwenluu@gmail.com"
         },
         cvUrl: "#contact" // Đường dẫn tải CV (file PDF hoặc link Google Drive)
     },
