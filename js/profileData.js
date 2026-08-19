@@ -10,6 +10,7 @@ const profileData = {
     config: {
         defaultLang: "vi", // "vi" hoặc "en"
         defaultTheme: "light", // "dark" hoặc "light"
+        avatarUrl: "assets/images/avatar.png",
         email: "olwenluu@gmail.com",
         phone: "+84 908 613 416",
         location: {
