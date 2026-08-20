@@ -36,9 +36,9 @@ html.light {
     --border-color: rgba(203, 213, 225, 0.8);
     --border-highlight: rgba(99, 102, 241, 0.4);
     
-    --text-primary: #0b1f33;
+    --text-primary: #1e293b;
     --text-secondary: #334e68;
-    --text-muted: #829ab1;
+    --text-muted: #6366f1;
     
     --primary-gradient: linear-gradient(135deg, #0b1f33 0%, #123b5d 50%, #2563eb 100%);
     --secondary-gradient: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
