@@ -71,9 +71,9 @@ const profileData = {
             ],
             quickInfo: [
                 { label: "Chuyên môn", value: "Digital & Brand Marketing" },
-                { label: "Nơi làm việc", value: "Hà Nội / Remote" },
-                { label: "Ngôn ngữ", value: "Tiếng Việt (Mẹ đẻ), Tiếng Anh (IELTS 7.0)" },
-                { label: "Tình trạng", value: "Sẵn sàng hợp tác / Full-time" }
+                { label: "Nơi làm việc", value: "Cần Thơ / Remote" },
+                { label: "Ngôn ngữ", value: "Tiếng Việt (Mẹ đẻ), Tiếng Anh" },
+                { label: "Tình trạng", value: "Sẵn sàng hợp tác / Remote" }
             ],
             galleryTitle: "Khoảnh khắc & Hoạt động thực tế",
             gallerySubtitle: "Một số hình ảnh tại các sự kiện, workshop và hoạt động sáng tạo thường nhật"
@@ -94,14 +94,15 @@ const profileData = {
             },
             timeline: [
                 {
-                    period: "2024 - Hiện tại",
-                    role: "Senior Digital Marketing Specialist",
-                    company: "V-Growth Media & Agency",
-                    description: "Chịu trách nhiệm hoạch định và điều phối chiến lược tiếp thị đa kênh cho hơn 10 đối tác doanh nghiệp lớn. Quản lý tổng ngân sách quảng cáo hơn 600 triệu VNĐ/tháng.",
+                    period: "2023 - Hiện tại",
+                    role: "Marketing Executive",
+                    company: "Hải Âu Cần Thơ",
+                    description: "Chịu trách nhiệm hoạch định và điều phối chiến lược tiếp thị đa kênh cho 3 thương hiệu trực thuộc Công ty",
                     achievements: [
-                        "Tối ưu hóa phễu chuyển đổi, giúp giảm 28% chi phí trên một khách hàng tiềm năng (CAC).",
-                        "Xây dựng hệ thống báo cáo tự động hóa Dashboard (Looker Studio + GA4) theo dõi ROI tức thì.",
-                        "Dẫn dắt đội ngũ 6 thành viên phụ trách Content, Media và Ads."
+                        "Sản xuất nội dung & Tối ưu hóa phễu chuyển đổi: giúp tăng 100% lượt tương tác.",
+                        "Lập kế hoạch và sáng tạo ấn phẩm đa phương tiện (Copywriting,  thiết kế qua Canva/AI/PTS, dựng video bằng Capcut Pro.).",
+                        "Tìm kiếm đối tác & Nâng tầm thương hiệu: mở rộng các cơ hội hợp tác chiến lược, đưa hình ảnh thương hiệu xuất hiện tại các sự kiện và hội chợ để gia tăng tối đa độ phủ sóng.",
+                        "Dẫn dắt đội ngũ 5 thành viên phụ trách Content, Media và Ads."
                     ],
                     tags: ["Omnichannel Strategy", "Meta Ads", "Google Ads PMax", "Team Leadership"]
                 },
