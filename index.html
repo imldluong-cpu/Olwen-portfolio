@@ -26,13 +26,31 @@
             theme: {
                 extend: {
                     colors: {
-                        brand: {
-                            50: '#eef2ff',
-                            100: '#e0e7ff',
-                            400: '#818cf8',
-                            500: '#6366f1',
-                            600: '#4f46e5',
-                            700: '#4338ca',
+                        navy: {
+                            DEFAULT: '#102A43',
+                            50: '#F0F4F8',
+                            100: '#D9E2EC',
+                            200: '#BCCCDC',
+                            300: '#9FB3C8',
+                            400: '#829AB1',
+                            500: '#627D98',
+                            600: '#486581',
+                            700: '#334E68',
+                            800: '#243B53',
+                            900: '#102A43',
+                            950: '#0A1926',
+                        },
+                        powder: {
+                            DEFAULT: '#3976A8',
+                            light: '#DCEAF4',
+                            bg: '#EEF3F7',
+                            dark: '#245A85',
+                            bright: '#62B0E8',
+                        },
+                        blush: {
+                            DEFAULT: '#D88C9A',
+                            light: '#F4B8C3',
+                            soft: '#FDF2F4',
                         }
                     },
                     fontFamily: {
@@ -48,9 +66,9 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=2.0">
+    <link rel="stylesheet" href="css/style.css?v=3.0">
 </head>
-<body class="antialiased selection:bg-indigo-500 selection:text-white">
+<body class="antialiased selection:bg-[#3976A8] selection:text-white">
 
     <!-- Top Scroll Progress Bar -->
     <div id="scroll-progress" style="width: 0%;"></div>
@@ -62,25 +80,25 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <!-- Brand Logo -->
             <a href="#home" class="flex items-center gap-2.5 group">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-pink-500 flex items-center justify-center text-white font-extrabold text-xl shadow-lg shadow-indigo-500/30 group-hover:scale-105 transition-transform">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#245A85] via-[#3976A8] to-[#D88C9A] flex items-center justify-center text-white font-extrabold text-xl shadow-lg shadow-[#3976A8]/30 group-hover:scale-105 transition-transform">
                     Y
                 </div>
                 <div class="flex flex-col">
-                    <span class="font-heading font-extrabold text-lg tracking-tight text-slate-900 group-hover:text-indigo-600 transition-colors">
-                        YẾN LƯU<span class="text-indigo-500">.</span>
+                    <span class="font-heading font-extrabold text-lg tracking-tight text-[#102A43] dark:text-[#F8FAFC] group-hover:text-[#3976A8] transition-colors">
+                        YẾN LƯU<span class="text-[#D88C9A]">.</span>
                     </span>
-                    <span class="text-[10px] uppercase font-bold tracking-widest text-slate-500 -mt-1">Marketing Pro</span>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-[#627D98] -mt-1">Marketing Pro</span>
                 </div>
             </a>
 
             <!-- Desktop Navigation Menu -->
             <nav class="hidden md:flex items-center gap-7">
-                <a href="#home" id="nav-home" class="nav-link text-sm font-semibold text-slate-700 hover:text-indigo-600 transition-colors">Trang chủ</a>
-                <a href="#about" id="nav-about" class="nav-link text-sm font-semibold text-slate-700 hover:text-indigo-600 transition-colors">Giới thiệu</a>
-                <a href="#experiences" id="nav-experiences" class="nav-link text-sm font-semibold text-slate-700 hover:text-indigo-600 transition-colors">Kinh nghiệm & Dự án</a>
-                <a href="#skills" id="nav-skills" class="nav-link text-sm font-semibold text-slate-700 hover:text-indigo-600 transition-colors">Kỹ năng</a>
-                <a href="#education" id="nav-education" class="nav-link text-sm font-semibold text-slate-700 hover:text-indigo-600 transition-colors">Học vấn</a>
-                <a href="#contact" id="nav-contact" class="nav-link text-sm font-semibold text-slate-700 hover:text-indigo-600 transition-colors">Liên hệ</a>
+                <a href="#home" id="nav-home" class="nav-link text-sm font-semibold text-[#102A43] hover:text-[#3976A8] transition-colors">Trang chủ</a>
+                <a href="#about" id="nav-about" class="nav-link text-sm font-semibold text-[#102A43] hover:text-[#3976A8] transition-colors">Giới thiệu</a>
+                <a href="#experiences" id="nav-experiences" class="nav-link text-sm font-semibold text-[#102A43] hover:text-[#3976A8] transition-colors">Kinh nghiệm & Dự án</a>
+                <a href="#skills" id="nav-skills" class="nav-link text-sm font-semibold text-[#102A43] hover:text-[#3976A8] transition-colors">Kỹ năng</a>
+                <a href="#education" id="nav-education" class="nav-link text-sm font-semibold text-[#102A43] hover:text-[#3976A8] transition-colors">Học vấn</a>
+                <a href="#contact" id="nav-contact" class="nav-link text-sm font-semibold text-[#102A43] hover:text-[#3976A8] transition-colors">Liên hệ</a>
             </nav>
 
             <!-- Action Controls (Language, Theme, CTA) -->
@@ -91,7 +109,7 @@
                 </button>
 
                 <!-- Theme Switcher Button -->
-                <button id="theme-toggle" class="p-2.5 rounded-full glass-card hover:border-indigo-500/50 text-slate-700 hover:text-indigo-600 transition-all" title="Đổi giao diện Sáng/Tối">
+                <button id="theme-toggle" class="p-2.5 rounded-full glass-card hover:border-[#3976A8]/50 text-[#102A43] dark:text-[#F8FAFC] hover:text-[#3976A8] transition-all" title="Đổi giao diện Sáng/Tối">
                     <i id="theme-icon" data-lucide="sun" class="w-4 h-4"></i>
                 </button>
 
@@ -134,33 +152,33 @@
            ========================================================================== -->
         <section id="home" class="min-h-[calc(100vh-5rem)] flex items-center justify-center relative overflow-hidden py-16 px-4 sm:px-6 lg:px-8">
             <!-- Background Gradient Blobs -->
-            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-indigo-500/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
-            <div class="absolute bottom-10 right-10 w-[400px] h-[400px] bg-pink-500/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#3976A8]/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+            <div class="absolute bottom-10 right-10 w-[400px] h-[400px] bg-[#D88C9A]/15 rounded-full blur-[120px] pointer-events-none -z-10"></div>
 
             <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
                 <!-- Left Content -->
                 <div class="lg:col-span-7 flex flex-col items-start text-left space-y-6">
                     <!-- Status Badge -->
-                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-card border border-emerald-500/40 text-xs font-bold text-emerald-700 bg-emerald-50">
-                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-card border border-[#3976A8]/30 text-xs font-bold text-[#102A43] dark:text-[#62B0E8] bg-[#EEF3F7] dark:bg-[#102A43]/50">
+                        <span class="w-2.5 h-2.5 rounded-full bg-[#3976A8] animate-ping"></span>
                         <span id="hero-status">Sẵn sàng nhận dự án mới</span>
                     </div>
 
                     <!-- Main Headline -->
                     <div>
-                        <p id="hero-greeting" class="text-lg sm:text-xl font-bold text-indigo-600 mb-2">Xin chào, tôi là</p>
-                        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">
-                            <span id="hero-name" class="text-slate-900">Yến Lưu</span>
+                        <p id="hero-greeting" class="text-lg sm:text-xl font-bold text-[#245A85] dark:text-[#62B0E8] mb-2">Xin chào, tôi là</p>
+                        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-[#102A43] dark:text-[#F8FAFC] tracking-tight leading-[1.1]">
+                            <span id="hero-name" class="text-[#102A43] dark:text-[#F8FAFC]">Yến Lưu</span>
                         </h1>
                         <!-- Typewriter Dynamic Headline -->
-                        <div class="text-xl sm:text-2xl lg:text-3xl font-bold mt-3 text-slate-800 flex items-center min-h-[40px]">
+                        <div class="text-xl sm:text-2xl lg:text-3xl font-bold mt-3 text-[#102A43] dark:text-[#F8FAFC] flex items-center min-h-[40px]">
                             <span id="typewriter-text" class="gradient-text"></span>
                             <span class="typewriter-cursor"></span>
                         </div>
                     </div>
 
                     <!-- Tagline -->
-                    <p id="hero-tagline" class="text-base sm:text-lg text-slate-700 max-w-2xl leading-relaxed font-normal">
+                    <p id="hero-tagline" class="text-base sm:text-lg text-[#486581] dark:text-[#BCCCDC] max-w-2xl leading-relaxed font-normal">
                         Kết hợp tư duy Sáng tạo Nghệ thuật và Phân tích Số liệu (Data-driven) để kiến tạo các chiến dịch tiếp thị bứt phá và thúc đẩy tăng trưởng doanh thu bền vững.
                     </p>
 
@@ -170,29 +188,29 @@
                             <span>Xem Chiến Dịch</span>
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
-                        <a href="#contact" id="hero-cta-contact" class="glass-card px-7 py-3.5 rounded-full text-sm font-bold text-slate-800 hover:text-indigo-600 hover:border-indigo-500 flex items-center justify-center gap-2 w-full sm:w-auto shadow-sm">
+                        <a href="#contact" id="hero-cta-contact" class="glass-card px-7 py-3.5 rounded-full text-sm font-bold text-[#102A43] dark:text-[#F8FAFC] hover:text-[#3976A8] hover:border-[#3976A8] flex items-center justify-center gap-2 w-full sm:w-auto shadow-sm">
                             <span>Liên Hệ Ngay</span>
                             <i data-lucide="mail" class="w-4 h-4"></i>
                         </a>
                     </div>
 
                     <!-- Social Channels -->
-                    <div class="flex items-center gap-3 pt-4 border-t border-slate-200 w-full">
-                        <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Kết nối:</span>
+                    <div class="flex items-center gap-3 pt-4 border-t border-[#DCEAF4] dark:border-white/10 w-full">
+                        <span class="text-xs font-bold uppercase tracking-wider text-[#627D98] dark:text-[#829AB1]">Kết nối:</span>
                         <div class="flex items-center gap-2">
-                            <a href="https://www.linkedin.com/in/yen-luu/" target="_blank" rel="noreferrer" class="w-9 h-9 rounded-full glass-card flex items-center justify-center text-slate-700 hover:text-indigo-600 hover:scale-110 transition-all shadow-sm">
+                            <a href="https://www.linkedin.com/in/yen-luu/" target="_blank" rel="noreferrer" class="w-9 h-9 rounded-full glass-card flex items-center justify-center text-[#102A43] dark:text-[#F8FAFC] hover:text-[#3976A8] hover:scale-110 transition-all shadow-sm">
                                 <i data-lucide="linkedin" class="w-4 h-4"></i>
                             </a>
-                            <a href="https://www.facebook.com/yenluu1303/" target="_blank" rel="noreferrer" class="w-9 h-9 rounded-full glass-card flex items-center justify-center text-slate-700 hover:text-indigo-600 hover:scale-110 transition-all shadow-sm">
+                            <a href="https://www.facebook.com/yenluu1303/" target="_blank" rel="noreferrer" class="w-9 h-9 rounded-full glass-card flex items-center justify-center text-[#102A43] dark:text-[#F8FAFC] hover:text-[#3976A8] hover:scale-110 transition-all shadow-sm">
                                 <i data-lucide="facebook" class="w-4 h-4"></i>
                             </a>
-                            <a href="https://www.instagram.com/py03/" target="_blank" rel="noreferrer" class="w-9 h-9 rounded-full glass-card flex items-center justify-center text-slate-700 hover:text-pink-600 hover:scale-110 transition-all shadow-sm">
+                            <a href="https://www.instagram.com/py03/" target="_blank" rel="noreferrer" class="w-9 h-9 rounded-full glass-card flex items-center justify-center text-[#102A43] dark:text-[#F8FAFC] hover:text-[#D88C9A] hover:scale-110 transition-all shadow-sm">
                                 <i data-lucide="instagram" class="w-4 h-4"></i>
                             </a>
-                            <a href="https://www.tiktok.com/@betoyen" target="_blank" rel="noreferrer" class="w-9 h-9 rounded-full glass-card flex items-center justify-center text-slate-700 hover:text-black hover:scale-110 transition-all shadow-sm">
+                            <a href="https://www.tiktok.com/@betoyen" target="_blank" rel="noreferrer" class="w-9 h-9 rounded-full glass-card flex items-center justify-center text-[#102A43] dark:text-[#F8FAFC] hover:text-[#245A85] hover:scale-110 transition-all shadow-sm">
                                 <i data-lucide="video" class="w-4 h-4"></i>
                             </a>
-                            <a href="mailto:olwenluu@gmail.com" class="w-9 h-9 rounded-full glass-card flex items-center justify-center text-slate-700 hover:text-emerald-600 hover:scale-110 transition-all shadow-sm">
+                            <a href="mailto:olwenluu@gmail.com" class="w-9 h-9 rounded-full glass-card flex items-center justify-center text-[#102A43] dark:text-[#F8FAFC] hover:text-[#3976A8] hover:scale-110 transition-all shadow-sm">
                                 <i data-lucide="mail" class="w-4 h-4"></i>
                             </a>
                         </div>
@@ -201,30 +219,30 @@
 
                 <!-- Right Profile Visual & Floating Badges -->
                 <div class="lg:col-span-5 flex items-center justify-center relative">
-                    <div class="relative w-72 sm:w-84 md:w-96 aspect-[4/5] rounded-3xl p-2.5 bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 shadow-2xl pulse-glow">
-                        <div class="w-full h-full rounded-2xl overflow-hidden bg-slate-100">
-                            <img id="hero-avatar-img" src="assets/images/avatar.png" alt="Profile Avatar" class="w-full h-full object-cover">
+                    <div class="relative w-72 sm:w-84 md:w-96 aspect-[4/5] rounded-3xl p-2.5 bg-gradient-to-tr from-[#245A85] via-[#3976A8] to-[#D88C9A] shadow-2xl pulse-glow">
+                        <div class="w-full h-full rounded-2xl overflow-hidden bg-[#EEF3F7] dark:bg-[#102A43]">
+                            <img id="hero-avatar-img" src="assets/images/avatar.png" onerror="this.onerror=null;this.src='assets/images/avatar.jpg'" alt="Profile Avatar" class="w-full h-full object-cover">
                         </div>
 
                         <!-- Floating Achievement Badge 1 -->
-                        <div class="absolute -bottom-6 -left-6 glass-card p-3.5 rounded-2xl shadow-xl flex items-center gap-3 float-slow border border-indigo-500/30">
-                            <div class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center">
+                        <div class="absolute -bottom-6 -left-6 glass-card p-3.5 rounded-2xl shadow-xl flex items-center gap-3 float-slow border border-[#3976A8]/30">
+                            <div class="w-10 h-10 rounded-xl bg-[#EEF3F7] text-[#3976A8] dark:bg-[#3976A8]/20 dark:text-[#62B0E8] flex items-center justify-center">
                                 <i data-lucide="award" class="w-5 h-5"></i>
                             </div>
                             <div>
-                                <div id="hero-exp-badge" class="text-xs font-bold text-slate-100">3+ Năm Kinh Nghiệm</div>
-                                <div class="text-[10px] text-slate-400">Marketing & Growth</div>
+                                <div id="hero-exp-badge" class="text-xs font-bold text-[#102A43] dark:text-[#F8FAFC]">3+ Năm Kinh Nghiệm</div>
+                                <div class="text-[10px] text-[#486581] dark:text-[#9FB3C8]">Marketing & Growth</div>
                             </div>
                         </div>
 
                         <!-- Floating Achievement Badge 2 -->
-                        <div class="absolute -top-4 -right-4 glass-card p-3 rounded-2xl shadow-xl flex items-center gap-2.5 float-delayed border border-pink-500/30">
-                            <div class="w-9 h-9 rounded-xl bg-pink-500/20 text-pink-400 flex items-center justify-center">
+                        <div class="absolute -top-4 -right-4 glass-card p-3 rounded-2xl shadow-xl flex items-center gap-2.5 float-delayed border border-[#D88C9A]/30">
+                            <div class="w-9 h-9 rounded-xl bg-[#FDF2F4] text-[#D88C9A] dark:bg-[#D88C9A]/20 dark:text-[#F4B8C3] flex items-center justify-center">
                                 <i data-lucide="trending-up" class="w-4 h-4"></i>
                             </div>
                             <div>
-                                <div id="hero-roas-badge" class="text-xs font-bold text-slate-100">350% Tăng Trưởng</div>
-                                <div class="text-[10px] text-slate-400">ROAS & Doanh Thu</div>
+                                <div id="hero-roas-badge" class="text-xs font-bold text-[#102A43] dark:text-[#F8FAFC]">Remote Job</div>
+                                <div class="text-[10px] text-[#486581] dark:text-[#9FB3C8]">Available Worldwide</div>
                             </div>
                         </div>
                     </div>
@@ -671,7 +689,7 @@
     </div>
 
     <!-- Scripts (with cache-busting) -->
-    <script src="js/profileData.js?v=1.3"></script>
-    <script src="js/main.js?v=1.3"></script>
+    <script src="js/profileData.js?v=3.0"></script>
+    <script src="js/main.js?v=3.0"></script>
 </body>
 </html>
