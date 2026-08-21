@@ -44,13 +44,13 @@ const profileData = {
             name: "Yến Lưu",
             typewriterPrefix: "Tôi là ",
             roles: [
-                "Digital Marketing Specialist",
                 "Content & Brand Strategist",
-                "Performance Ads Expert",
-                "Growth & Campaign Manager"
+                "Digital Marketing Specialist",
+                "Growth & Campaign Specialist",
+                "Performance Ads"
             ],
             tagline: "Kết hợp tư duy Sáng tạo Nghệ thuật và Phân tích Số liệu (Data-driven) để kiến tạo các chiến dịch tiếp thị bứt phá và thúc đẩy tăng trưởng doanh thu bền vững.",
-            ctaProjects: "Xem Chiến Dịch",
+            ctaProjects: "Xem Dự Án",
             ctaContact: "Liên Hệ Ngay",
             statusAvailable: "Sẵn sàng nhận dự án mới",
             experienceBadge: "3+ Năm Kinh Nghiệm",
@@ -59,18 +59,18 @@ const profileData = {
 
         about: {
             sectionBadge: "Về bản thân",
-            title: "Đam mê kiến tạo giá trị qua từng chiến dịch",
-            subtitle: "Hành trình kết nối cảm xúc thương hiệu với khách hàng mục tiêu",
+            title: "Kiến tạo giá trị qua từng dự án",
+            subtitle: "Kết nối cảm xúc thương hiệu với khách hàng mục tiêu",
             bioParagraph1: "Chào bạn! Tôi là một chuyên viên <strong>Marketing</strong> với hơn 3+ năm kinh nghiệm thực chiến trong việc hoạch định chiến lược, triển khai chiến dịch truyền thông đa kênh (Omnichannel) và tối ưu hóa hiệu suất chuyển đổi số.",
             bioParagraph2: "Triết lý làm việc của tôi: <em>'Mọi ý tưởng sáng tạo phải được neo giữ bởi dữ liệu thực tế và đo lường bằng kết quả kinh doanh'</em>. Tôi có thế mạnh đồng thời ở cả hai mảng: <strong>Branding & Storytelling</strong> (kể câu chuyện thương hiệu chạm đến trái tim) và <strong>Performance Marketing</strong> (quản lý ngân sách quảng cáo tối ưu ROI/ROAS).",
             stats: [
                 { value: "3+", label: "Năm kinh nghiệm", icon: "award" },
                 { value: "50+", label: "Chiến dịch thực thi", icon: "rocket" },
                 { value: "350%", label: "Tăng trưởng ROAS TB", icon: "trending-up" },
-                { value: "15+", label: "Thương hiệu đồng hành", icon: "briefcase" }
+                { value: "10+", label: "Thương hiệu đồng hành", icon: "briefcase" }
             ],
             quickInfo: [
-                { label: "Chuyên môn", value: "Digital & Brand Marketing" },
+                { label: "Chuyên môn", value: "Social Media Marketing Specialist" },
                 { label: "Nơi làm việc", value: "Cần Thơ / Remote" },
                 { label: "Ngôn ngữ", value: "Tiếng Việt (Mẹ đẻ), Tiếng Anh" },
                 { label: "Tình trạng", value: "Sẵn sàng hợp tác / Remote" }
@@ -96,7 +96,7 @@ const profileData = {
                 {
                     period: "2023 - Hiện tại",
                     role: "Marketing Executive",
-                    company: "Hải Âu Cần Thơ",
+                    company: "CÔNG TY TNHH NHÀ HÀNG KHÁCH SẠN VÀ DU LỊCH Hải Âu Cần Thơ",
                     description: "Chịu trách nhiệm hoạch định và điều phối chiến lược tiếp thị đa kênh cho 3 thương hiệu trực thuộc Công ty",
                     achievements: [
                         "Sản xuất nội dung & Tối ưu hóa phễu chuyển đổi: giúp tăng 100% lượt tương tác.",
@@ -107,21 +107,21 @@ const profileData = {
                     tags: ["Omnichannel Strategy", "Meta Ads", "Google Ads PMax", "Team Leadership"]
                 },
                 {
-                    period: "2022 - 2024",
+                    period: "2023",
                     role: "Content & Social Media Lead",
-                    company: "Nova Brand Studio",
-                    description: "Định hướng nội dung sáng tạo, xây dựng cộng đồng trên TikTok, Facebook và chiến lược Inbound Marketing dài hạn cho các thương hiệu phong cách sống & F&B.",
+                    company: "CÔNG TY CỔ PHẦN DV TM IVY",
+                    description: "Định hướng nội dung sáng tạo, xây dựng cộng đồng trên Facebook và chiến lược Inbound Marketing dài hạn cho các thương hiệu F&B",
                     achievements: [
                         "Đạt mốc 15 triệu+ lượt xem hữu cơ (organic views) trên TikTok qua chuỗi nội dung viral ngắn.",
                         "Tăng trưởng 150% lượng người theo dõi trung thành và tỷ lệ tương tác (ER) đạt 8.5%.",
-                        "Thiết lập quy trình hợp tác với hơn 100+ KOC/KOL theo mô hình Affiliate & Booking."
+                        "Thiết lập quy trình hợp tác với hơn 20+ KOC/KOL theo mô hình Booking."
                     ],
-                    tags: ["TikTok Strategy", "Viral Content", "KOL Booking", "Community Building"]
+                    tags: ["Viral Content", "KOL Booking", "Community Building"]
                 },
                 {
                     period: "2021 - 2022",
-                    role: "Marketing Executive",
-                    company: "Alpha Retail Group",
+                    role: "Copywriting",
+                    company: "CÔNG TY TNHH MTV TM DV MADIAD",
                     description: "Tham gia triển khai các chiến dịch khuyến mãi mùa vụ, quản lý nội dung Fanpage, Email Marketing và hỗ trợ tổ chức sự kiện kích hoạt thương hiệu trực tiếp (Offline Activations).",
                     achievements: [
                         "Đóng góp tăng 35% doanh thu trong đợt Mega Sale cuối năm qua phễu Email & SMS Automation.",
